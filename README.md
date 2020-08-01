@@ -7,6 +7,7 @@ package main
 
 import (
 	"fmt"
+    "errors"
 )
 
 func main() {
@@ -77,7 +78,7 @@ func f() {
 func g(i int) {
 	if i > 3 {
 		fmt.Println("Panicking!")
-		panic(fmt.Sprintf("%v", i))
+		panic(errors.New("Get me recovery"))
 	}
 	defer fmt.Println("Defer in g", i)
 	fmt.Println("Printing in g", i)
