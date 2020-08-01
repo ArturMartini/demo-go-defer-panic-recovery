@@ -85,3 +85,4 @@ func g(i int) {
 }
 ```
 
+For more details https://blog.golang.org/defer-panic-and-recover
